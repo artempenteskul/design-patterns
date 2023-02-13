@@ -1,3 +1,5 @@
+import random
+
 from abc import ABC, abstractmethod
 
 
@@ -63,3 +65,32 @@ class MacFactory(GUIFactory):
 
     def create_checkbox(self) -> CheckBox:
         return MacCheckBox()
+
+
+###############################
+
+# Application code doesn't care with what factory it works. All the works happens though the interfaces (GUIFactory, Button, CheckBox)
+class Application:
+    def __init__(self, factory: GUIFactory) -> None:
+        self.factory = factory
+
+    def create_ui(self) -> None:
+        print(self.factory.create_button())
+        print(self.factory.create_checkbox())
+
+
+# The application picks the factory type depending on the current configuration or env settings and creates it at runtime (usually on init step)
+class ApplicationConfigurator:
+    def __init__(self, config=random.choice(['Windows', 'Mac'])) -> None:
+        if config == 'Windows':
+            self.factory = WinFactory()
+        elif config == 'Mac':
+            self.factory == MacFactory()
+        else:
+            raise Exception('Unknown config.')
+
+
+if __name__ == '__main__':
+    app_config = ApplicationConfigurator()
+    app = Application(app_config.factory)
+    app.create_ui()
