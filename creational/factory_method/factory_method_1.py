@@ -1,10 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-"""
-The Product interface declares the operations that all concrete products
-must implement.
-"""
+""" The Product interface declares the operations that all concrete products must implement. """
 
 class Product(ABC):
     @abstractmethod
@@ -12,29 +9,23 @@ class Product(ABC):
         pass
 
 
-"""
-Concrete Products provide various implementations of the Product interface.
-"""
+""" Concrete Products provide various implementations of the Product interface. """
 
-class ConcreteProduct1(Product):
+class Product1(Product):
     def operation(self) -> str:
-        return 'Result of the ConcreteProduct1'
+        return 'Result of the Product2'
 
 
-class ConcreteProduct2(Product):
+class Product2(Product):
     def operation(self) -> str:
-        return 'Result of the ConcreteProduct2'
+        return 'Result of the Product2'
 
 
 
-"""
-The Creator class declares the factory method that is supposed to return an
-object of a Product class. The Creator's subclasses usually provide the
-implementation of this method.
-"""
+""" The Creator class declares the factory method that is supposed to return an object of a Product class. The Creator's subclasses usually provide the implementation of this method. """
 class Creator(ABC):
     @abstractmethod
-    def factory_method(self):
+    def factory_method(self) -> Product:
         pass
 
     def some_operation(self) -> str:
@@ -43,19 +34,16 @@ class Creator(ABC):
         return result
 
 
-"""
-Concrete Creators subclasses override the factory method in order to change the
-resulting product's type.
-"""
+""" Concrete Creators subclasses override the factory method in order to change the resulting product's type. """
 
-class ConcreteCreator1(Creator):
+class Creator1(Creator):
     def factory_method(self) -> Product:
-        return ConcreteProduct1()
+        return Product1()
 
 
-class ConcreteCreator2(Creator):
+class Creator2(Creator):
     def factory_method(self) -> Product:
-        return ConcreteProduct2()
+        return Product2()
 
 
 #############################
@@ -66,9 +54,9 @@ def client_code(creator: Creator) -> None:
 
 if __name__ == '__main__':
     print('App: Launched with the ConcreteCreator1.')
-    client_code(ConcreteCreator1())
+    client_code(Creator1())
     print()
 
     print('App: Launched with the ConcreteCreator2.')
-    client_code(ConcreteCreator2())
+    client_code(Creator2())
     print()
