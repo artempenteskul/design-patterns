@@ -1,0 +1,1 @@
+Abstract Factory is a creational pattern that lets you produce families of related objects without specifying their concrete classes.
