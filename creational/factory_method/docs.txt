@@ -1,1 +1,8 @@
---- factory method (creational pattern) ---
+Factory method is a creational design pattern that provides an interface for creating objects in the superclass,
+but allows subclasses to alter the type of objects that will be created.
+
+Basically we create interface (abstract class) for all possible variations that we could use (such as Product interface and Product1, Product2 as subclasses).
+Subclasses inherit all the methods from the interface.
+Then we create the basic class with the factory_method (abstract method) and also we can provide additional bussiness logic there.
+After that we can easily create subclasses from this basic class and ovewrite the factory_method which returns us different variations (Products) that we've written before.
+Also, in order not to spam a bunch of subclasses, the logic of factory_method could be implemented directly in the basic class (e.g. based on parameter value).
