@@ -75,8 +75,12 @@ class Application:
         self.factory = factory
 
     def create_ui(self) -> None:
-        print(self.factory.create_button())
-        print(self.factory.create_checkbox())
+        # application do not know what factory it uses under the hood
+        button = self.factory.create_button()
+        checkbox = self.factory.create_checkbox()
+
+        print(button.paint())
+        print(checkbox.paint())
 
 
 # The application picks the factory type depending on the current configuration or env settings and creates it at runtime (usually on init step)
@@ -85,7 +89,7 @@ class ApplicationConfigurator:
         if config == 'Windows':
             self.factory = WinFactory()
         elif config == 'Mac':
-            self.factory == MacFactory()
+            self.factory = MacFactory()
         else:
             raise Exception('Unknown config.')
 
