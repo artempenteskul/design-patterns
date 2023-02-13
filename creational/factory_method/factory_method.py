@@ -3,37 +3,38 @@ import random
 from abc import ABC, abstractmethod
 
 
-# interface of the different types of products
+# interface for the different variations (all variations should inherit one interface)
 class Button(ABC):
-    def render(self):
+    @abstractmethod
+    def render(self) -> None:
         pass
 
     @abstractmethod
-    def on_click(self):
+    def on_click(self) -> None:
         pass
 
 
-# first type of the Button
+# first variation of Button interface
 class WindowsButton(Button):
-    def render(self):
-        print('rendering windows')
+    def render(self) -> None:
+        print('Windows rendering')
 
-    def on_click(self):
-        print('windows on click')
+    def on_click(self) -> None:
+        print('Windows on_click')
 
 
-# second type of the Button
+# second variation of Button interface
 class HTMLButton(Button):
-    def render(self):
-        print('rendering html')
+    def render(self) -> None:
+        print('HTML rendering')
 
-    def on_click(self):
-        print('html on click')
+    def on_click(self) -> None:
+        print('HTML on_click')
 
 
-# basic class with fabric method
+# basic class with factory_method (this method will be overwritten in the subclasses)
 class Dialog:
-    def render(self):
+    def render(self) -> None:
         button = self.create_button()
         button.on_click()
         button.render()
@@ -43,20 +44,19 @@ class Dialog:
         pass
 
 
-# first concrete fabric which overrides fabric method
+# first subclass which overwrites factory_method (returns one of the variants of Button interface)
 class WindowsDialog(Dialog):
     def create_button(self) -> Button:
         return WindowsButton()
 
 
-# second concrete fabric which overrides fabric method
+# second subclass which overwrites factory_method (returns one of the variants of Button interface)
 class WebDialog(Dialog):
     def create_button(self) -> Button:
         return HTMLButton()
 
 
-############################ 
-
+# client code (application code is not dependent on the specific Button or Dialog, we could easily add new one)
 class Application:
     def __init__(self, config=random.choice(['Windows', 'Web'])) -> None:
         if config == 'Windows':
