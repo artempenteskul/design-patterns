@@ -1,1 +1,8 @@
 Abstract Factory is a creational pattern that lets you produce families of related objects without specifying their concrete classes.
+
+Basically the goal of the pattern is to return depend in the code on the abstact factory and then at runtime decide which factory is needed and use it to create suitable objects.
+Firstly, we create basic interfaces for each product, such as AbstractProduct1 and AbstractProduct2.
+From the Abstract Products classes we can inherit and implement families of the products. (That means that Product1 and Product2 in one variations are sort of relatives).
+Then we need to create basic Abstract Factory, which should know about all the products and contain methods to create this products.
+From this basic Abstact Factory we can create subclasses, which will overwrite the methods of creation products and every factory will return products from same family.
+As a result, application code operates with basic Abstact Factory interface and works with every new/existing factory.
