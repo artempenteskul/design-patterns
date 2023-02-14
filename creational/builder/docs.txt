@@ -1,2 +1,11 @@
 Builder is a creational design pattern that lets you construct complex objects step by step. The pattern allows you to produce different types and represantations of 
 an object using the same construction code.
+
+Basically, we divide the creation of the complex method into steps.
+Firstly we need to create the object of the Product and all its properties and methods inside (this methods will be used by concrete builder).
+Then we create the basic abstract Builder interface, which contains all the methods to modify the object (these methods are abstract as well).
+Concrete Builder objects are subclasses of the Builder interface, which has its own Product and inherited overwritten methods to modify the object.
+Finally, we can invoke this methods directly through client code to create the object in steps or pass this to the Director object.
+
+Director (optional object) knows how Product objects could be modified and can contain some popular pipelines (as methods) to create the Product through the Builder.
+Director object could work with every possible Builder instance that the client code passes to it.
