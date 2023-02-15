@@ -90,4 +90,3 @@ if __name__ == '__main__':
     print()
     print(f"id(deep_copied_component.some_circular_ref.parent): {id(deep_copied_component.some_circular_ref.parent)}")
     print(f"id(deep_copied_component.some_circular_ref.parent.some_circular_ref.parent): {id(deep_copied_component.some_circular_ref.parent.some_circular_ref.parent)}")
-

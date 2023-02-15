@@ -1,1 +1,9 @@
 Prototype is a creational design pattern that lets you copy existing objects without making your code dependent on their classes.
+
+All Prototype classes should have a common interface that makes it possible to copy objects even if their concrete classes are unknown.
+Prototype objects (that's the object from which we will create the copy) can produce full copies since objects of the same class can access each other private methods.
+
+Basically, we need to create interface Prototype with one abstract method clone().
+This will help us to invoke the method without knowing the concrete object class we want to copy.
+Subclasses of this Prototype interface will overwrite clone() method and everything what this method is doing is just creates the same object as superclass and returns it.
+As a result, on the step of Program initialization we can create a lot of Prototypes(using one class and subclasses with clone method) and then use them instead of a lot of usual subclasses.
