@@ -1,1 +1,5 @@
 Singleton is a creational design pattern that lets you ensure that a class has only one instance, while providing a global access point to the instance.
+
+Basically, we need to hide the constructor (init) method in the object and create static method to get the instance of this object (such as getInstance).
+Then all the invocations of this object should be replaced by this method in the code, and this object inside will detect whether it need to create instance or return already existing.
+Singleton pattern implementation varies a lot from language to language (there are many ways to implement it).
