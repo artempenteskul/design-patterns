@@ -1,0 +1,1 @@
+Adapter is structural design pattern that allows objects with incompatible interfaces to collaborate.
