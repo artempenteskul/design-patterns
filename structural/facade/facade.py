@@ -4,7 +4,7 @@ class Facade:
     The Facade delegates the client requests to the appropriate objects within the subsystem.
     The Facade is also responsible for managing their lifecycle. All of this shields the client from the undesired complexity of the subsystem.
     """
-    def __init__(self, subsystem1: 'Subsystem1', subsystem2: 'Subsystem2') -> None:
+    def __init__(self, subsystem1: 'Subsystem1' = None , subsystem2: 'Subsystem2' = None) -> None:
         """
         Depending on your application's needs, you can provide the Facade with existing subsystem objects or force the Facade to create them on its own.
         """
@@ -24,6 +24,8 @@ class Facade:
         results.append('Facade orders subsystems to perform the action:')
         results.append(self._subsystem1.operation_n())
         results.append(self._subsystem2.operation_z())
+        return "\n".join(results)
+
 
     
 class Subsystem1:
