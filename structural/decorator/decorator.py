@@ -23,7 +23,7 @@ class Decorator(Component):
     _component: Component = None
 
     def __init__(self, component: Component) -> None:
-        self._component = Component
+        self._component = component
 
     @property
     def component(self) -> Component:
@@ -79,4 +79,3 @@ if __name__ == '__main__':
     print(f"Client: I've got a decorated object.")
     client_code(decorator2)
     print('\n')
-    
