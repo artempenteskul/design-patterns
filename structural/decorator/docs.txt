@@ -1,0 +1,2 @@
+Decorator is a structural design pattern that lets you attach new behaviours to objects
+by placing these objects inside special wrapper objects that contain new behaviours.
