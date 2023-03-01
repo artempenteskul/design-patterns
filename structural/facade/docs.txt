@@ -1,1 +1,5 @@
 Facade is a structural design pattern that provides a simplified interface to a library, a framework, or any other complex set of classes.
+
+Facade basically helps to hide some hard logic and provide easy and simple Interface (Facade) to the client_code.
+In this case, we don't have mess with our own classes and the classes of additional library or framework.
+We also can create Additional Facade objects to divide the responsibilities and tasks between Facades.
