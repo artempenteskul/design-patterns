@@ -1,2 +1,8 @@
 Flyweight is a structural design pattern that lets you fit more objects into the available amount of RAM by sharing common parts
 of state between multiple objects instead of keeping all of the data in each object.
+
+Basically, the main use-case of using Flyweight pattern is when have something similar in lots of objects and we can reuse it for all objects.
+To implement pattern, we need to create basic class of Flyweight (place, where we store objects common information).
+And also we need create a Factory for Flyweights, which will be responsible for managing and creation of objects.
+As a result, we won't duplicate common info for objects - all objects will have a link to the Flyweight object.
+If there wasn't such object - the new one Flyweight object will be created and it will be saved in Flyweights Factory.
