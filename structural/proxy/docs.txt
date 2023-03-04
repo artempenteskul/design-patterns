@@ -1,3 +1,7 @@
 Proxy is a structural design pattern that lets you provide a substitute or placeholder for another object.
 A proxy controls access to the original object, allowing you to perform something either before or after the request gets through to the original object.
 
+Basically, Proxy is an additional layer before request from client to RealSubject, which could handle different operations (access, logging, caching, etc).
+To implement pattern we need to create basic interface (Subject) from which we will inherite our RealSubject (service) and Proxy.
+After that in client code we could use as Proxy as our actual service (RealSubject).
+Proxy, inside its implementation should definitely redirects the requests to our RealSubject object (actual service).
