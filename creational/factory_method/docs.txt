@@ -3,8 +3,29 @@ but allows subclasses to alter the type of objects that will be created.
 
 =====
 
-Basically we create interface (abstract class) for all possible variations that we could use (such as Product interface and Product1, Product2 as subclasses).
-Subclasses inherit all the methods from the interface.
-Then we create the basic class with the factory_method (abstract method) and also we can provide additional bussiness logic there.
-After that we can easily create subclasses from this basic class and ovewrite the factory_method which returns us different variations (Products) that we've written before.
-Also, in order not to spam a bunch of subclasses, the logic of factory_method could be implemented directly in the basic class (e.g. based on parameter value).
+The Factory Method design pattern is a creational design pattern that provides an interface for creating objects in a superclass,
+but allows subclasses to alter the type of objects that will be created.
+
+The Factory Method pattern defines an abstract Factory class or interface that specifies a method for creating objects,
+and allows subclasses to implement that method to create different types of objects.
+
+=====
+
+The Factory Method pattern is useful when you want to provide a framework for creating objects,
+but you don't want to specify the exact class of object that will be created until runtime. 
+
+This can be useful when you have a set of related classes that share a common interface,
+but you want to allow clients to create instances of those classes without having to know their exact implementation.
+
+=====
+
+The Factory Method pattern can also be used to encapsulate object creation in a single class, which can help to simplify code and improve maintainability.
+By using a Factory Method, you can centralize object creation logic, which can make it easier to change the way objects are created without affecting the rest of your code.
+
+=====
+
+To implement the Factory Method pattern, you would typically create an abstract Factory class or interface that defines a method for creating objects.
+Then you would create one or more subclasses of the Factory class or interface, each of which implements the createObject() method to create a different type of object.
+Clients would then use the Factory class to create instances of the objects, without having to know the specific implementation details of the objects themselves.
+
+=====
