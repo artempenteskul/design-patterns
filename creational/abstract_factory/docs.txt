@@ -1,8 +1,23 @@
 Abstract Factory is a creational pattern that lets you produce families of related objects without specifying their concrete classes.
 
-Basically the goal of the pattern is to depend in the code on the abstact factory and then at runtime decide which factory is needed and use it to create suitable objects.
-Firstly, we create basic interfaces for each product, such as AbstractProduct1 and AbstractProduct2.
-From the Abstract Products classes we can inherit and implement families of the products. (That means that Product1 and Product2 in one variations are sort of relatives).
-Then we need to create basic Abstract Factory, which should know about all the products and contain methods to create this products.
-From this basic Abstact Factory we can create subclasses, which will overwrite the methods of creation products and every factory will return products from same family.
-As a result, application code operates with basic Abstract Factory interface and works with every new/existing factory.
+=====
+
+The idea behind the Abstract Factory pattern is to provide a way to create families of related objects without having to specify their concrete classes.
+This is useful when you need to create objects that are part of a larger system, and you want to ensure that those objects are all created with a consistent set of properties.
+
+=====
+
+To use the Abstract Factory pattern, you first define an abstract factory interface that provides methods for creating objects of different types.
+Then you create one or more concrete factory classes that implement this interface and provide the specific implementation details for creating objects of each type.
+
+=====
+
+Clients of the system can then use the abstract factory interface to create objects, without having to know the specific implementation details of the objects themselves.
+The factory classes are responsible for creating objects that are consistent with the overall design of the system.
+
+=====
+
+One of the benefits of using the Abstract Factory pattern is that it allows you to switch between different families of objects easily.
+For example, if you need to change the way that a system creates objects, you can simply change the concrete factory classes, without having to change any of the client code.
+
+=====
