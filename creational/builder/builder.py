@@ -39,7 +39,7 @@ class ConcreteBuilder1(Builder):
         self._product = Product1()
 
     @property
-    def product(self) -> Product1:
+    def product(self) -> 'Product1':
         """
         Concrete Builders are supposed to provide their own methods for
         retrieving results. That's because various types of builders may create
@@ -150,4 +150,3 @@ if __name__ == '__main__':
     builder.produce_part_a()
     builder.produce_part_b()
     builder.product.list_parts()
-    
