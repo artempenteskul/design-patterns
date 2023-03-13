@@ -1,9 +1,33 @@
 Prototype is a creational design pattern that lets you copy existing objects without making your code dependent on their classes.
 
-All Prototype classes should have a common interface that makes it possible to copy objects even if their concrete classes are unknown.
-Prototype objects (that's the object from which we will create the copy) can produce full copies since objects of the same class can access each other private methods.
+=====
 
-Basically, we need to create interface Prototype with one abstract method clone().
-This will help us to invoke the method without knowing the concrete object class we want to copy.
-Subclasses of this Prototype interface will overwrite clone() method and everything what this method is doing is just creates the same object as superclass and returns it.
-As a result, on the step of Program initialization we can create a lot of Prototypes(using one class and subclasses with clone method) and then use them instead of a lot of usual subclasses.
+The Prototype Design Pattern is a creational design pattern that allows the creation of objects based on existing objects through cloning.
+The main idea of this pattern is to avoid the high cost of creating new objects by copying existing objects.
+
+=====
+
+The Prototype Design Pattern consists of several components:
+
+The Prototype interface, which defines the clone() method that all concrete prototypes must implement.
+The ConcretePrototype classes, which implement the Prototype interface and provide a concrete implementation of the clone() method to clone themselves.
+The Client class, which creates and manages the prototypes.
+The typical workflow of the Prototype Design Pattern is as follows:
+
+=====
+
+The client code creates one or more ConcretePrototype objects and stores them in a PrototypeManager.
+The client code retrieves a ConcretePrototype object from the PrototypeManager and calls its clone() method.
+The clone() method creates a new object and copies the properties of the existing object into the new object.
+The client code uses the cloned object.
+The main advantages of the Prototype Design Pattern are:
+
+=====
+
+It reduces the number of classes needed to create objects and improves performance.
+It provides a simple way to create objects with different initial states without changing the code.
+It allows for the creation of complex objects without having to know their internal details.
+Overall, the Prototype Design Pattern is a useful pattern to use when creating objects with different initial states that share a common structure.
+It allows for easy cloning of objects and reduces the need for creating new objects, which can be particularly useful in resource-constrained environments.
+
+=====
