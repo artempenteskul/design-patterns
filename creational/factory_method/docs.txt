@@ -14,16 +14,18 @@ The Creator abstract class, which defines the factory method that returns a Prod
 The ConcreteCreator classes, which implement the factory method and return a specific type of Product object.
 The Product abstract class, which defines the interface for the objects that the factory method creates.
 The ConcreteProduct classes, which implement the Product interface and define the concrete objects that the factory method creates.
-The typical workflow of the Factory Method Design Pattern is as follows:
 
 =====
+
+The typical workflow of the Factory Method Design Pattern is as follows:
 
 The client code creates a ConcreteCreator object.
 The client code calls the factory method on the ConcreteCreator object to create a ConcreteProduct object.
 The ConcreteCreator object creates a ConcreteProduct object and returns it to the client code.
-The main advantages of the Factory Method Design Pattern are:
 
 =====
+
+The main advantages of the Factory Method Design Pattern are:
 
 It encapsulates object creation and provides a flexible way to create objects.
 It allows for the easy addition of new types of objects without changing the client code.
