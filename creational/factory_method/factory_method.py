@@ -17,7 +17,7 @@ class Creator(ABC):
         """
         Also note that, despite its name, the Creator's primary responsibility is not creating products.
         Usually, it contains some core bussiness logic that relies on Product objects, returned by the factory method.
-        Subclasses can indirectly change that bussiness logic by overriding the factory method and returning a different type of product from it.       
+        Subclasses can indirectly change that bussiness logic by overriding the factory method and returning a different type of product from it.
         """
 
         # Call the factory method to create a Product object.
@@ -56,6 +56,7 @@ class Product(ABC):
 
 """ Concrete Products provide various implementations of the Product interface. """
 
+
 class ConcreteProduct1(Product):
     def operation(self) -> str:
         return "{Result of the ConcreteProduct1}"
@@ -80,9 +81,9 @@ def client_code(creator: Creator) -> None:
 
 if __name__ == '__main__':
     print("App: Launched with the ConcreteCreator1.")
-    client_code(ConcreteCreator1)
+    client_code(ConcreteCreator1())
 
     print('\n')
 
     print("App: Launched with the ConcreteCreator2.")
-    client_code(ConcreteCreator2)
+    client_code(ConcreteCreator2())
