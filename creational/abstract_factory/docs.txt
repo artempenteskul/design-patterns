@@ -13,16 +13,18 @@ The Abstract Factory interface, which declares a set of factory methods for crea
 The Concrete Factory classes, which implement the Abstract Factory interface and create a family of related objects.
 The Abstract Product interface, which declares a set of methods for interacting with the abstract objects created by the factory.
 The Concrete Product classes, which implement the Abstract Product interface and define the concrete objects created by the factory.
-The typical workflow of the Abstract Factory Design Pattern is as follows:
 
 =====
+
+The typical workflow of the Abstract Factory Design Pattern is as follows:
 
 The client code creates a Concrete Factory object.
 The client code calls the factory methods on the Concrete Factory object to create a family of related Concrete Product objects.
 The Concrete Factory object creates a family of related Concrete Product objects and returns them to the client code.
-The main advantages of the Abstract Factory Design Pattern are:
 
 =====
+
+The main advantages of the Abstract Factory Design Pattern are:
 
 It provides an interface for creating families of related objects without specifying their concrete classes.
 It promotes loose coupling between objects and improves maintainability and scalability of the code.
