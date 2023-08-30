@@ -16,8 +16,8 @@ class Creator(ABC):
     def some_operation(self) -> str:
         """
         Also note that, despite its name, the Creator's primary responsibility is not creating products.
-        Usually, it contains some core bussiness logic that relies on Product objects, returned by the factory method.
-        Subclasses can indirectly change that bussiness logic by overriding the factory method and returning a different type of product from it.
+        Usually, it contains some core business logic that relies on Product objects, returned by the factory method.
+        Subclasses can indirectly change that business logic by overriding the factory method and returning a different type of product from it.
         """
 
         # Call the factory method to create a Product object.
