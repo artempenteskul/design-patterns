@@ -31,7 +31,7 @@ class ConcreteBuilder1(Builder):
     """
     def __init__(self) -> None:
         """
-        A fresh builder intance should contain a blank product object, which is used for futher assembly.
+        A fresh builder instance should contain a blank product object, which is used for further assembly.
         """
         self.reset()
 
