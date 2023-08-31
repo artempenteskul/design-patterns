@@ -1,5 +1,5 @@
 Builder is a creational design pattern that lets you construct complex objects step by step. 
-The pattern allows you to produce different types and represantations of an object using the same construction code.
+The pattern allows you to produce different types and representations of an object using the same construction code.
 
 =====
 
@@ -14,13 +14,15 @@ This way, the client code can create different representations of the same objec
 =====
 
 The pattern consists of several components, including:
+
 The Builder interface, which defines the methods that must be implemented by all builders.
 The ConcreteBuilder classes, which implement the Builder interface and provide specific implementation details for constructing a particular object.
 The Director class, which controls the construction process and uses the Builder interface to build the object.
 The Product class, which represents the complex object being built.
-The typical workflow of the Builder Design Pattern is as follows:
 
 =====
+
+The typical workflow of the Builder Design Pattern is as follows:
 
 The client code creates a Director object and a ConcreteBuilder object.
 The client code passes the ConcreteBuilder object to the Director object.
@@ -30,6 +32,7 @@ The client code retrieves the constructed object from the ConcreteBuilder object
 ======
 
 The main advantages of the Builder Design Pattern are:
+
 It allows for the creation of complex objects without exposing their internal structure to the client code.
 It provides better control over the construction process and allows for the creation of different representations of the same object.
 It simplifies the code and makes it more modular and easier to maintain.
