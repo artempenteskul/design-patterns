@@ -9,8 +9,7 @@ class SingletonMeta(type):
 
     def __call__(cls, *args, **kwargs):
         """
-        Possible changes to the value of the `__init__` argument do not affect
-        the returned instance.
+        Possible changes to the value of the `__init__` argument do not affect the returned instance.
         """
         if cls not in cls._instances:
             instance = super().__call__(*args, **kwargs)
@@ -21,8 +20,7 @@ class SingletonMeta(type):
 class Singleton(metaclass=SingletonMeta):
     def some_business_logic(self):
         """
-        Finally, any singleton should define some business logic, which can be
-        executed on its instance.
+        Finally, any singleton should define some business logic, which can be executed on its instance.
         """
 
         # ...
