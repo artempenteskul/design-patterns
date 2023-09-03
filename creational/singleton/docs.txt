@@ -9,25 +9,26 @@ This pattern is used when a single instance of a class is needed to coordinate a
 
 The Singleton Design Pattern consists of a single component:
 
-=====
-
 The Singleton class, which has a private constructor and a static method that returns the single instance of the class.
-The typical workflow of the Singleton Design Pattern is as follows:
 
 =====
+
+The typical workflow of the Singleton Design Pattern is as follows:
 
 The client code calls the static method of the Singleton class to get the instance of the class.
 The Singleton class creates the single instance if it does not exist, or returns the existing instance to the client code.
-The main advantages of the Singleton Design Pattern are:
 
 =====
+
+The main advantages of the Singleton Design Pattern are:
 
 It provides a global point of access to a single instance of a class.
 It ensures that only one instance of the class is created, even in a multi-threaded environment.
 It reduces the memory footprint of an application by avoiding the creation of multiple instances of a class.
-However, there are some disadvantages of the Singleton Design Pattern as well:
 
 =====
+
+However, there are some disadvantages of the Singleton Design Pattern as well:
 
 It can be difficult to test, as it can interfere with other parts of the system.
 It can be misused, leading to overuse and decreased maintainability of the code.
