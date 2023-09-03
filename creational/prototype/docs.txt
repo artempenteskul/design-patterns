@@ -12,17 +12,19 @@ The Prototype Design Pattern consists of several components:
 The Prototype interface, which defines the clone() method that all concrete prototypes must implement.
 The ConcretePrototype classes, which implement the Prototype interface and provide a concrete implementation of the clone() method to clone themselves.
 The Client class, which creates and manages the prototypes.
-The typical workflow of the Prototype Design Pattern is as follows:
 
 =====
+
+The typical workflow of the Prototype Design Pattern is as follows:
 
 The client code creates one or more ConcretePrototype objects and stores them in a PrototypeManager.
 The client code retrieves a ConcretePrototype object from the PrototypeManager and calls its clone() method.
 The clone() method creates a new object and copies the properties of the existing object into the new object.
 The client code uses the cloned object.
-The main advantages of the Prototype Design Pattern are:
 
 =====
+
+The main advantages of the Prototype Design Pattern are:
 
 It reduces the number of classes needed to create objects and improves performance.
 It provides a simple way to create objects with different initial states without changing the code.
