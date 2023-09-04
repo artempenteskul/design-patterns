@@ -1,6 +1,10 @@
 Bridge is a structural design pattern that lets you split a large class or a set of closely related classes into two separate hierarchies-abstraction
 and implementation - which can be developed independently of each other.
 
-Basically, in Bridge pattern we need to divide large hierarchy into two independent parts. 
-The main hierarchy will use another (e.g. Shape object uses Color object), and the client code could easily work with all the variations of two hierarchies.
-Also we could easily expand the main hierarchy withouth changing the dependent object.
+=====
+
+The Bridge design pattern is a structural design pattern that separates an object's abstraction from its implementation so that the two can vary independently.
+It is used to decouple an abstraction (such as an interface or an abstract class) from its concrete implementations.
+This separation allows you to change or extend the abstraction and implementations independently without affecting each other.
+
+=====
