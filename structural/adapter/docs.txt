@@ -1,6 +1,9 @@
 Adapter is structural design pattern that allows objects with incompatible interfaces to collaborate.
 
-Basically, the main goal of this pattern is to make incompatible interfaces compatible. In python, we can use multiple inheritance for this.
-For example, we have the clients code which could operate only with XML data and the library which could operate only with JSON data. 
-In this case we can easily add the Adapter class which will "translate" the data for library from XML to JSON and return us needed result.
-The clients code in this way will operate with Adapter class instead of library, and Adapter class inside will use the library for its needs.
+=====
+
+The Adapter design pattern is a structural design pattern that allows objects with incompatible interfaces to work together.
+It acts as a bridge between two incompatible interfaces, making them compatible without changing their source code.
+This pattern is especially useful when you have existing code or third-party libraries that you want to integrate with new code without modifying the existing code.
+
+=====
