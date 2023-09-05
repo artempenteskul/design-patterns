@@ -1,8 +1,9 @@
 Composite is a structural design pattern that lets you compose objects into tree structures and then work with these structures as if they were individual objects.
 
-Basically, the best example of Composite pattern is parcel which consits of boxes and products inside boxes.
-So, in order to know the total price of the parcel we need to make common interface for Box(Composite) and Product(Leaf), which is called Component for example.
-And then we can build tree-like structure and operate with it as if it is a single object (which basically consist from Box with children and Product without children).
-Composite object is responsible for calculation and acumulation all needed data from its children and return to its parent.
-Leaf object is responsible only for its own calculation results as Leaf does not have children.
-Finally, client code could easily manipulate with simple objects (Leaf) as well as with complex (Composite).
+=====
+
+The Composite Design Pattern is a structural design pattern that allows you to compose objects into tree structures to represent part-whole hierarchies.
+It lets clients treat individual objects and compositions of objects uniformly.
+In other words, it enables you to work with both individual objects and groups of objects in a consistent manner.
+
+=====

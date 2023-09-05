@@ -59,7 +59,7 @@ class Composite(Component):
     Usually, the Composite objects delegate the actual work to their children and then "sum-up" the result.
     """
     def __init__(self) -> None:
-        self._children : List[Component] = []
+        self._children: List[Component] = []
 
     """
     The Composite object can add or remove other components (both simple or complex) to or from its child list.
