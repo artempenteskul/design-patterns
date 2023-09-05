@@ -1,8 +1,9 @@
 Decorator is a structural design pattern that lets you attach new behaviours to objects
 by placing these objects inside special wrapper objects that contain new behaviours.
 
-Basically, Decorator pattern helps when you need to add functionality to the object on the fly without chaning the object itself.
-We create basic Interface (Component) for all our concrete component and basic decorator classes.
-Decorator classes should accept as an parameter Component object while initialization (it doesn't matter whether it will be simple or already decorated object).
-And finally in the needed method we could easily extend the functionality of the method, by invoking our wrapped Component behaviour and adding of new behaviour.
-That's helps client_code to manipute with objects using one basic Interface (Component) and manipulate with simple and already one or more time wrapped objects.
+=====
+
+The Decorator Design Pattern is a structural design pattern that allows you to add behavior or responsibilities to objects dynamically, without altering their class structures.
+It is used to extend the functionality of objects in a flexible and reusable way.
+
+=====
