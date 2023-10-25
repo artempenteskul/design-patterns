@@ -1,5 +1,23 @@
 Facade is a structural design pattern that provides a simplified interface to a library, a framework, or any other complex set of classes.
 
-Facade basically helps to hide some hard logic and provide easy and simple Interface (Facade) to the client_code.
-In this case, we don't have mess with our own classes and the classes of additional library or framework.
-We also can create Additional Facade objects to divide the responsibilities and tasks between Facades.
+=====
+
+The Facade pattern is a structural design pattern that provides a simplified, unified interface to a complex systems.
+Making it easier for clients to interact with the system and hiding the implementation details of its subsystems.
+It promotes decoupling, organization, and maintainability while enhancing security and access control.
+The Facade is particularly valuable when dealing with complex systems with numerous components or when integrating with external libraries or services.
+
+=====
+
+Components of the Facade Pattern:
+
+Facade:
+This is the central class or interface that clients interact with.
+The Facade provides a simplified, unified interface to a set of complex subsystem components.
+It hides the complexity of the subsystem and shields clients from the details of its implementation.
+
+Subsystems:
+Subsystems are individual classes or components that perform specific tasks or functions.
+These are the underlying classes or components that the Facade coordinates and uses to fulfill client requests.
+
+=====
