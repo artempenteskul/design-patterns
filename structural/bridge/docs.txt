@@ -1,10 +1,29 @@
-Bridge is a structural design pattern that lets you split a large class or a set of closely related classes into two separate hierarchies-abstraction
-and implementation - which can be developed independently of each other.
+Bridge is a structural design pattern that lets you split a large class or a set of closely related classes
+into two separate hierarchies-abstraction and implementation - which can be developed independently of each other.
 
 =====
 
 The Bridge design pattern is a structural design pattern that separates an object's abstraction from its implementation so that the two can vary independently.
 It is used to decouple an abstraction (such as an interface or an abstract class) from its concrete implementations.
 This separation allows you to change or extend the abstraction and implementations independently without affecting each other.
+
+=====
+
+Components of the Bridge Pattern:
+
+Abstraction:
+This is an interface or an abstract class that defines the high-level functionality that clients use.
+The Abstraction contains a reference to an Implementor.
+
+Refined Abstraction:
+Refined Abstractions are concrete implementations of the Abstraction interface.
+They provide specific features or variations of the high-level functionality and use the Implementor to perform the low-level operations.
+
+Implementor:
+The Implementor is another interface or abstract class that defines the low-level operations.
+Concrete Implementors provide the actual implementation of these operations.
+
+Concrete Implementor:
+Concrete Implementors are the classes that provide specific implementations of the low-level operations defined in the Implementor interface.
 
 =====
