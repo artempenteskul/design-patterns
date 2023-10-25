@@ -1,17 +1,15 @@
 import json
 
-from typing import Dict
-
 
 class Flyweight:
     """
-    The Flyweight stores a common portion of state that belongs to multiple real bussiness entities.
+    The Flyweight stores a common portion of state that belongs to multiple real business entities.
     The Flyweight accepts the rest of the state (unique for each entity) via its methods parameters. 
     """
-    def __init__(self, shared_state: str) -> None:
+    def __init__(self, shared_state: dict) -> None:
         self._shared_state = shared_state
 
-    def operation(self, unique_state: str) -> None:
+    def operation(self, unique_state: dict or list) -> None:
         s = json.dumps(self._shared_state)
         u = json.dumps(unique_state)
         print(f"Flyweight: Displaying shared ({s}) and unique ({u}) state.", end="")
@@ -24,19 +22,19 @@ class FlyweightFactory:
     When the client requests a flyweight, the factory either returns an existing instance or creates a new one, if it does not exist yet.
     """
     
-    _flyweights: Dict[str, Flyweight] = {}
+    _flyweights: dict[str, Flyweight] = {}
 
-    def __init__(self, initial_flyweights: Dict) -> None:
+    def __init__(self, initial_flyweights: list) -> None:
         for state in initial_flyweights:
             self._flyweights[self.get_key(state)] = Flyweight(state)
 
-    def get_key(self, state: Dict) -> str:
+    def get_key(self, state: dict) -> str:
         """
         Returns a Flyweight's string hash for a given state.
         """
         return '_'.join(sorted(state))
     
-    def get_flyweight(self, shared_state: Dict) -> Flyweight:
+    def get_flyweight(self, shared_state: dict or list) -> Flyweight:
         """
         Returns an existing Flyweight with a given state or creates a new one.
         """

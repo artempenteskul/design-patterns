@@ -1,8 +1,32 @@
 Flyweight is a structural design pattern that lets you fit more objects into the available amount of RAM by sharing common parts
 of state between multiple objects instead of keeping all of the data in each object.
 
-Basically, the main use-case of using Flyweight pattern is when have something similar in lots of objects and we can reuse it for all objects.
-To implement pattern, we need to create basic class of Flyweight (place, where we store objects common information).
-And also we need create a Factory for Flyweights, which will be responsible for managing and creation of objects.
-As a result, we won't duplicate common info for objects - all objects will have a link to the Flyweight object.
-If there wasn't such object - the new one Flyweight object will be created and it will be saved in Flyweights Factory.
+=====
+
+The Flyweight design pattern is a structural design pattern that is used to minimize memory or computational overhead when dealing with a large number of similar objects.
+It does this by sharing common, intrinsic data across multiple objects, while keeping the extrinsic data (data that varies between objects) separate.
+This pattern is particularly useful in situations where you have a significant number of objects with shared characteristics, and you want to optimize memory and performance.
+
+=====
+
+Key components of the Flyweight pattern:
+
+Flyweight Interface (Flyweight):
+This is an interface or an abstract class that defines the methods that the concrete flyweights must implement.
+It usually contains the intrinsic data, which is shared among multiple flyweight objects.
+
+Concrete Flyweight (ConcreteFlyweight):
+These are the concrete implementations of the Flyweight interface.
+They store the intrinsic data, which is shared among multiple objects, and provide methods for manipulating the intrinsic data.
+They are often made immutable to ensure that the shared data remains consistent.
+
+Flyweight Factory (FlyweightFactory):
+This is a factory class responsible for creating and managing flyweight objects.
+It maintains a pool of flyweight objects and provides a way to access or retrieve them.
+When a client requests a flyweight, the factory either returns an existing one from the pool or creates a new one if none is available.
+
+Client:
+The client code uses the Flyweight Factory to create or retrieve flyweight objects.
+The client also provides extrinsic data, which is not shared among flyweights and is specific to the individual context.
+
+=====
