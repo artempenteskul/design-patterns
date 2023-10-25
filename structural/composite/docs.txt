@@ -7,3 +7,19 @@ It lets clients treat individual objects and compositions of objects uniformly.
 In other words, it enables you to work with both individual objects and groups of objects in a consistent manner.
 
 =====
+
+Components of the Composite Pattern:
+
+Component:
+This is an abstract class or interface that defines the common interface for all components in the composition.
+It includes methods for adding, removing, and accessing child components, as well as any other common operations.
+
+Leaf:
+Leaf components are the individual objects in the composition.
+They are the basic building blocks and do not have children. They implement the Component interface.
+
+Composite:
+Composite components are containers that can hold both Leaf components and other Composite components.
+They implement the Component interface and provide implementations for adding, removing, and accessing child components.
+
+=====
