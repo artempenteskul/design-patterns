@@ -1,0 +1,36 @@
+Command is behavioral design pattern that converts requests or simple operations into objects.
+The conversion allows deferred or remote execution of commands, storing command history, etc.
+
+=====
+
+The Command Design Pattern is a behavioral design pattern that turns a request into a stand-alone object.
+This object contains all the information about the request, including the action to be performed and any parameters required for its execution.
+It allows you to parameterize objects with different requests, delay or queue a request's execution, and support undoable operations.
+
+=====
+
+Key components of the Command pattern include:
+
+Command Interface/Abstract Class:
+This defines the common interface for all concrete command classes.
+Typically, it includes a method like execute() that encapsulates the specific action associated with the command.
+
+Concrete Command:
+These are the concrete implementations of the Command interface.
+Each concrete command class encapsulates a specific action and any necessary parameters.
+When invoked, the execute() method of the concrete command performs the action.
+
+Invoker:
+This is responsible for invoking the command.
+It doesn't need to know the details of how the command is executed; it simply calls the execute() method on the command object.
+
+Receiver:
+The receiver is responsible for performing the actual work associated with the command.
+It is not mandatory, but it represents the object that the command is directing the action towards.
+The command knows how to interact with the receiver to perform the requested action.
+
+Client:
+The client is responsible for creating the command objects, associating them with specific receivers, and configuring the invokers.
+It is the client that decides which commands to execute and when.
+
+=====
