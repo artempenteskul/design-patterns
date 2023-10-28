@@ -2,3 +2,23 @@ Chain of Responsibility is behavioral design pattern that allows passing request
 
 =====
 
+The pattern allows multiple objects to handle the request without coupling sender class to the concrete classes of the receivers.
+The chain can be composed dynamically at runtime with any handler that follows a standard handler interface.
+
+=====
+
+Key components of the Chain of Responsibility pattern include:
+
+Handler Interface/Abstract Class:
+This defines the interface or abstract class that all concrete handlers must implement.
+It typically includes a method for handling requests. This is the common interface that all handlers in the chain adhere to.
+
+Concrete Handlers:
+These are the actual components in the chain. Each concrete handler implements the Handler interface/abstract class and is responsible for processing the request or passing it to the next handler in the chain.
+A handler can decide whether to process the request or delegate it to the next handler in the chain.
+
+Client:
+The client is responsible for creating the chain of handlers and initiating the request.
+It sends the request to the first handler in the chain and doesn't need to know which handler will ultimately handle the request.
+
+=====
