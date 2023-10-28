@@ -73,9 +73,9 @@ def client_code(handler: Handler) -> None:
         print(f'Client: Who wants a {food}?')
         result = handler.handle(food)
         if result:
-            print(f'RES - {result}', end='')
+            print(f'RES - {result}')
         else:
-            print(f'RES - food was left untouched.', end='')
+            print(f'RES - food was left untouched.')
 
 
 if __name__ == '__main__':
