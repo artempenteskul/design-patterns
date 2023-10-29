@@ -8,3 +8,24 @@ It separates the process of accessing the elements from the actual structure of 
 
 =====
 
+Key components of the Iterator pattern include:
+
+Iterator Interface/Abstract Class:
+This defines the common interface for all concrete iterators. It typically includes methods like next(), hasNext(), and sometimes remove().
+These methods allow the client code to traverse the elements of a collection.
+
+Concrete Iterator:
+These are the concrete implementations of the Iterator interface.
+Each concrete iterator is responsible for keeping track of the current position within the collection and providing methods to move to the next element, check if there are more elements (hasNext()), and possibly remove an element (remove()).
+It encapsulates the traversal logic.
+
+Aggregate Interface/Abstract Class:
+This defines the common interface for all concrete collections or aggregates.
+It typically includes a method to create an iterator instance that the client code can use to traverse the collection.
+
+Concrete Aggregate:
+These are the concrete implementations of the Aggregate interface.
+A concrete aggregate represents a collection of objects.
+It provides a method to create a concrete iterator for the collection.
+
+=====
