@@ -1,0 +1,10 @@
+Iterator is a behavioral design pattern that allows sequential traversal through a complex data structure without exposing its internal details.
+Thanks to the Iterator, clients can go over elements of different collections in a similar fashion using a single iterator interface.
+
+=====
+
+The Iterator Design Pattern is a behavioral design pattern that provides a way to access the elements of a collection sequentially without exposing the underlying representation of that collection.
+It separates the process of accessing the elements from the actual structure of the collection, making the code more flexible and decoupled.
+
+=====
+
