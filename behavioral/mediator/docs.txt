@@ -2,3 +2,27 @@ Mediator is a behavioral design pattern that reduces coupling between components
 The Mediator makes it easy to modify, extend and reuse individual components because they’re no longer dependent on the dozens of other classes.
 
 =====
+
+The Mediator Design Pattern is a behavioral design pattern that promotes loose coupling between components by centralizing their communication through a mediator object.
+It provides a way for various objects to interact with each other without directly referencing or being aware of each other's existence.
+Instead, they communicate through the mediator, which handles the communication and coordination between these objects.
+
+=====
+
+Key components of the Mediator pattern include:
+
+Mediator:
+This is an interface or an abstract class that defines the common interface for communication between different components.
+It typically includes methods for registering and notifying components.
+
+Concrete Mediator:
+This is a concrete implementation of the Mediator interface.
+It manages the interactions and communication between the various components.
+It keeps references to all the participating components and routes messages between them.
+
+Colleague:
+Colleagues are individual components or objects that need to communicate with each other.
+Instead of communicating directly with other colleagues, they interact with the mediator.
+Colleagues are often unaware of each other and only know about the mediator.
+
+=====
