@@ -81,4 +81,4 @@ if __name__ == '__main__':
     print('')
 
     print('Reverse traversal:')
-    print('\n'.join(collection.get_reverse_iterator()), end='')
+    print('\n'.join(collection.get_reverse_iterator()))
