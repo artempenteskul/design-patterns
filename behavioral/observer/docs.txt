@@ -2,3 +2,28 @@ Observer is a behavioral design pattern that allows some objects to notify other
 The Observer pattern provides a way to subscribe and unsubscribe to and from these events for any object that implements a subscriber interface.
 
 =====
+
+The Observer Design Pattern is a behavioral design pattern that defines a one-to-many dependency between objects so that when one object (the subject) changes its state, all its dependents (observers) are notified and updated automatically.
+The pattern is used to establish a distributed and loosely coupled interaction between objects, where the subject maintains a list of its observers, and these observers are notified of any state changes in the subject.
+
+=====
+
+Key components of the Observer pattern include:
+
+Subject (or Observable):
+This is the object that maintains a list of its observers and provides methods to attach, detach, and notify observers.
+It also includes the state that observers are interested in monitoring.
+
+Observer:
+This is an interface or an abstract class that defines the update method.
+Concrete observer classes implement this method. The update method is called by the subject when the subject's state changes, allowing the observer to react to the change.
+
+Concrete Subject:
+A concrete subject is an implementation of the subject interface.
+It keeps track of its observers, maintains its state, and notifies observers when the state changes.
+
+Concrete Observer:
+These are concrete implementations of the observer interface.
+Each concrete observer registers with a concrete subject to receive notifications and implements the update method to react to changes in the subject's state.
+
+=====
