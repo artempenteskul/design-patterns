@@ -2,3 +2,25 @@ State is a behavioral design pattern that allows an object to change the behavio
 The pattern extracts state-related behaviors into separate state classes and forces the original object to delegate the work to an instance of these classes, instead of acting on its own.
 
 =====
+
+The State Design Pattern is a behavioral design pattern that allows an object to alter its behavior when its internal state changes.
+The pattern is particularly useful when an object needs to change its behavior dynamically based on its internal state, and when there are a large number of potential states and transitions between them.
+
+=====
+
+Key components of the State pattern include:
+
+Context:
+This is the object that encapsulates the state and is responsible for maintaining a reference to the current state object.
+The context delegates state-specific behavior to the current state object.
+
+State:
+The state is an interface or an abstract class that defines a set of methods that represent the possible actions or behaviors of the context when it is in that state.
+Each concrete state class implements these methods according to its specific behavior.
+
+Concrete State:
+These are the concrete implementations of the state interface or class.
+Each concrete state encapsulates the behavior and logic associated with a particular state of the context.
+It defines how the context should behave when in that state.
+
+=====
