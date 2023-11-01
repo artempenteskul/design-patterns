@@ -81,7 +81,6 @@ class ConcreteMemento(Memento):
         return self._date
 
 
-
 class Caretaker:
     """
     The Caretaker does not depend on the Concrete Memento class.
