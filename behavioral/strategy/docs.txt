@@ -5,3 +5,25 @@ In order to change the way the context performs its work, other objects may repl
 
 =====
 
+The Strategy Design Pattern is a behavioral design pattern that defines a family of algorithms, encapsulates each one, and makes them interchangeable.
+It allows the client to choose the appropriate algorithm to use at runtime, rather than being fixed to a specific algorithm.
+The Strategy pattern helps in achieving better flexibility, maintainability, and extensibility by decoupling the client from the specific implementation of an algorithm.
+
+=====
+
+Key components of the Strategy pattern include:
+
+Context:
+This is the class that maintains a reference to a strategy object and can switch between different strategies.
+The context delegates the execution of an algorithm to the strategy object.
+
+Strategy:
+The strategy is an interface or an abstract class that defines a set of methods representing different algorithms.
+Concrete strategy classes implement these methods, each providing a specific algorithm or behavior.
+
+Concrete Strategy:
+These are the concrete implementations of the strategy interface or class.
+Each concrete strategy encapsulates a specific algorithm.
+Clients can choose and switch between different strategies as needed.
+
+=====
