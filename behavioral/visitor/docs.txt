@@ -1,3 +1,35 @@
 Visitor is a behavioral design pattern that allows adding new behaviors to existing class hierarchy without altering any existing code.
 
 =====
+
+The Visitor Design Pattern is a behavioral design pattern that allows you to separate the algorithm from the object structure it operates on.
+It enables you to add new operations to an object structure without modifying the objects themselves.
+This pattern is particularly useful when you have a complex object structure and want to perform various operations on the objects without having to modify their classes.
+
+=====
+
+Key components of the Visitor pattern include:
+
+Visitor:
+This is an interface or an abstract class that defines a set of visit methods, one for each type of element in the object structure.
+These visit methods take the elements as parameters and encapsulate the specific algorithms to be applied to them.
+
+Concrete Visitor:
+These are the concrete implementations of the Visitor interface.
+Each concrete visitor provides the actual implementation for the visit methods.
+You can have different concrete visitors for different operations on the object structure.
+
+Element:
+This is an interface or an abstract class that defines an accept method.
+This method takes a visitor as a parameter and allows the visitor to access and operate on the element.
+
+Concrete Element:
+These are the concrete implementations of the Element interface.
+Each concrete element class implements the accept method, allowing a visitor to visit and perform specific operations on the element.
+
+Object Structure:
+This is a collection of elements, which may vary in types.
+It provides a way to traverse and visit its elements.
+It typically has methods to add elements and accept visitors.
+
+=====
